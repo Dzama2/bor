@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WanderBlog - Travel Blog HTML Website Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="TemplateJungle">
+  <meta name="keywords" content="Travel, Blog, HTML, Website Template">
+  <meta name="description" content="WanderBlog is a Travel Blog HTML Website Template">
+
+  <!--Bootstrap ================================================== -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+  <!--vendor css ================================================== -->
+  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+
+  <!--Link Swiper's CSS ================================================== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- Style Sheet ================================================== -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Google Fonts ================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="user" viewBox="0 0 512 512">
+      <path fill="currentColor"
+        d="M332.64 64.58C313.18 43.57 286 32 256 32c-30.16 0-57.43 11.5-76.8 32.38c-19.58 21.11-29.12 49.8-26.88 80.78C156.76 206.28 203.27 256 256 256s99.16-49.71 103.67-110.82c2.27-30.7-7.33-59.33-27.03-80.6M432 480H80a31 31 0 0 1-24.2-11.13c-6.5-7.77-9.12-18.38-7.18-29.11C57.06 392.94 83.4 353.61 124.8 326c36.78-24.51 83.37-38 131.2-38s94.42 13.5 131.2 38c41.4 27.6 67.74 66.93 76.18 113.75c1.94 10.73-.68 21.34-7.18 29.11A31 31 0 0 1 432 480" />
+    </symbol>
+    <symbol id="search" viewBox="0 0 512 512">
+      <path fill="currentColor"
+        d="M456.69 421.39L362.6 327.3a173.8 173.8 0 0 0 34.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.8 173.8 0 0 0 327.3 362.6l94.09 94.09a25 25 0 0 0 35.3-35.3M97.92 222.72a124.8 124.8 0 1 1 124.8 124.8a124.95 124.95 0 0 1-124.8-124.8" />
+    </symbol>
+    <symbol id="cart" viewBox="0 0 512 512">
+      <circle cx="176" cy="416" r="32" fill="currentColor" />
+      <circle cx="400" cy="416" r="32" fill="currentColor" />
+      <path fill="currentColor"
+        d="M456.8 120.78a23.92 23.92 0 0 0-18.56-8.78H133.89l-6.13-34.78A16 16 0 0 0 112 64H48a16 16 0 0 0 0 32h50.58l45.66 258.78A16 16 0 0 0 160 368h256a16 16 0 0 0 0-32H173.42l-5.64-32h241.66A24.07 24.07 0 0 0 433 284.71l28.8-144a24 24 0 0 0-5-19.93" />
+    </symbol>
+    <symbol id="arrow-right" viewBox="0 0 32 32">
+      <path fill="currentColor"
+        d="M18.719 6.781L17.28 8.22L24.063 15H4v2h20.063l-6.782 6.781l1.438 1.438l8.5-8.5l.687-.719l-.687-.719z" />
+    </symbol>
+    <symbol id="arrow-left" viewBox="0 0 32 32">
+      <path fill="currentColor"
+        d="m13.281 6.781l-8.5 8.5l-.687.719l.687.719l8.5 8.5l1.438-1.438L7.938 17H28v-2H7.937l6.782-6.781z" />
+    </symbol>
+    <symbol id="mail" viewBox="0 0 100 100">
+      <path fill="currentColor"
+        d="M85.944 20.189H14.056a2.56 2.56 0 0 0-2.556 2.557v5.144c0 .237.257.509.467.619l37.786 21.583a.63.63 0 0 0 .318.083a.63.63 0 0 0 .324-.088L87.039 28.53c.206-.115.752-.419.957-.559c.248-.169.504-.322.504-.625v-4.601a2.56 2.56 0 0 0-2.556-2.556m2.237 15.457a.64.64 0 0 0-.645.004L66.799 47.851a.637.637 0 0 0-.145.985l20.74 22.357a.63.63 0 0 0 .467.204a.64.64 0 0 0 .639-.639V36.201a.64.64 0 0 0-.319-.555M60.823 51.948a.636.636 0 0 0-.791-.118l-8.312 4.891a3.24 3.24 0 0 1-3.208.021l-7.315-4.179a.64.64 0 0 0-.751.086L12.668 78.415a.64.64 0 0 0 .114 1.02c.432.254.849.375 1.273.375h71.153a.64.64 0 0 0 .585-.385a.64.64 0 0 0-.118-.689zm-26.489-2.347a.64.64 0 0 0-.115-1.023L12.453 36.146a.638.638 0 0 0-.953.556v32.62a.637.637 0 0 0 1.073.468z" />
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396z" />
+    </symbol>
+    <symbol id="twitter" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23" />
+    </symbol>
+    <symbol id="pinterest" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M9.04 21.54c.96.29 1.93.46 2.96.46a10 10 0 0 0 10-10A10 10 0 0 0 12 2A10 10 0 0 0 2 12c0 4.25 2.67 7.9 6.44 9.34c-.09-.78-.18-2.07 0-2.96l1.15-4.94s-.29-.58-.29-1.5c0-1.38.86-2.41 1.84-2.41c.86 0 1.26.63 1.26 1.44c0 .86-.57 2.09-.86 3.27c-.17.98.52 1.84 1.52 1.84c1.78 0 3.16-1.9 3.16-4.58c0-2.4-1.72-4.04-4.19-4.04c-2.82 0-4.48 2.1-4.48 4.31c0 .86.28 1.73.74 2.3c.09.06.09.14.06.29l-.29 1.09c0 .17-.11.23-.28.11c-1.28-.56-2.02-2.38-2.02-3.85c0-3.16 2.24-6.03 6.56-6.03c3.44 0 6.12 2.47 6.12 5.75c0 3.44-2.13 6.2-5.18 6.2c-.97 0-1.92-.52-2.26-1.13l-.67 2.37c-.23.86-.86 2.01-1.29 2.7z" />
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M13.028 2c1.125.003 1.696.009 2.189.023l.194.007c.224.008.445.018.712.03c1.064.05 1.79.218 2.427.465c.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.012.266.022.487.03.712l.006.194c.015.492.021 1.063.023 2.188l.001.746v1.31a79 79 0 0 1-.023 2.188l-.006.194c-.008.225-.018.446-.03.712c-.05 1.065-.22 1.79-.466 2.428a4.9 4.9 0 0 1-1.153 1.772a4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465l-.712.03l-.194.006c-.493.014-1.064.021-2.189.023l-.746.001h-1.309a78 78 0 0 1-2.189-.023l-.194-.006a63 63 0 0 1-.712-.031c-1.064-.05-1.79-.218-2.428-.465a4.9 4.9 0 0 1-1.771-1.153a4.9 4.9 0 0 1-1.154-1.772c-.247-.637-.415-1.363-.465-2.428l-.03-.712l-.005-.194A79 79 0 0 1 2 13.028v-2.056a79 79 0 0 1 .022-2.188l.007-.194c.008-.225.018-.446.03-.712c.05-1.065.218-1.79.465-2.428A4.9 4.9 0 0 1 3.68 3.678a4.9 4.9 0 0 1 1.77-1.153c.638-.247 1.363-.415 2.428-.465c.266-.012.488-.022.712-.03l.194-.006a79 79 0 0 1 2.188-.023zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 2a3 3 0 1 1 .001 6a3 3 0 0 1 0-6m5.25-3.5a1.25 1.25 0 0 0 0 2.5a1.25 1.25 0 0 0 0-2.5" />
+    </symbol>
+    <symbol id="youtube" viewBox="0 0 24 24">
+      <g fill="none" fill-rule="evenodd">
+        <path
+          d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+        <path fill="currentColor"
+          d="M12 4c.855 0 1.732.022 2.582.058l1.004.048l.961.057l.9.061l.822.064a3.8 3.8 0 0 1 3.494 3.423l.04.425l.075.91c.07.943.122 1.971.122 2.954s-.052 2.011-.122 2.954l-.075.91l-.04.425a3.8 3.8 0 0 1-3.495 3.423l-.82.063l-.9.062l-.962.057l-1.004.048A62 62 0 0 1 12 20a62 62 0 0 1-2.582-.058l-1.004-.048l-.961-.057l-.9-.062l-.822-.063a3.8 3.8 0 0 1-3.494-3.423l-.04-.425l-.075-.91A41 41 0 0 1 2 12c0-.983.052-2.011.122-2.954l.075-.91l.04-.425A3.8 3.8 0 0 1 5.73 4.288l.821-.064l.9-.061l.962-.057l1.004-.048A62 62 0 0 1 12 4m-2 5.575v4.85c0 .462.5.75.9.52l4.2-2.425a.6.6 0 0 0 0-1.04l-4.2-2.424a.6.6 0 0 0-.9.52Z" />
+      </g>
+    </symbol>
+    <symbol id="navbar-icon" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z" />
+    </symbol>
+    <symbol id="send" viewBox="0 0 32 32">
+      <path fill="currentColor"
+        d="M26.07 3.996a3 3 0 0 0-.933.223h-.004c-.285.113-1.64.683-3.7 1.547l-7.382 3.109c-5.297 2.23-10.504 4.426-10.504 4.426l.062-.024s-.359.118-.734.375a2 2 0 0 0-.586.567c-.184.27-.332.683-.277 1.11c.09.722.558 1.155.894 1.394c.34.242.664.355.664.355h.008l4.883 1.645c.219.703 1.488 4.875 1.793 5.836c.18.574.355.933.574 1.207q.157.21.379.351a1 1 0 0 0 .246.106l-.05-.012c.015.004.027.016.038.02c.04.011.067.015.118.023c.773.234 1.394-.246 1.394-.246l.035-.028l2.883-2.625l4.832 3.707l.11.047c1.007.442 2.027.196 2.566-.238c.543-.437.754-.996.754-.996l.035-.09l3.734-19.129c.106-.472.133-.914.016-1.343a1.8 1.8 0 0 0-.781-1.047a1.87 1.87 0 0 0-1.067-.27m-.101 2.05c-.004.063.008.056-.02.177v.011l-3.699 18.93c-.016.027-.043.086-.117.145c-.078.062-.14.101-.465-.028l-5.91-4.531l-3.57 3.254l.75-4.79l9.656-9c.398-.37.265-.448.265-.448c.028-.454-.601-.133-.601-.133l-12.176 7.543l-.004-.02l-5.836-1.965v-.004l-.015-.003l.03-.012l.032-.016l.031-.011s5.211-2.196 10.508-4.426c2.652-1.117 5.324-2.242 7.379-3.11a807 807 0 0 1 3.66-1.53c.082-.032.043-.032.102-.032z" />
+    </symbol>
+    <symbol id="google" viewBox="0 0 16 16">
+      <path fill="currentColor"
+        d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301c1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z" />
+    </symbol>
+  </svg>
+
+  <div class="search-popup">
+    <div class="search-popup-container">
+
+      <form role="search" method="get" class="form-group" action="index.html">
+        <input type="search" id="search-form" class="form-control border-0 border-bottom"
+          placeholder="Type and press enter" value="" name="s">
+        <button type="submit" class="search-submit border-0 position-absolute bg-white"
+          style="top: 15px;right: 15px;"><svg class="search" width="24" height="24">
+            <use xlink:href="#search"></use>
+          </svg></button>
+      </form>
+
+      <h5 class="cat-list-title">Browse Categories</h5>
+
+      <ul class="cat-list">
+        <li class="cat-list-item">
+          <a href="#" title="Self Love">Travel</a>
+        </li>
+        <li class="cat-list-item">
+          <a href="#" title="Relationships">Mountains</a>
+        </li>
+        <li class="cat-list-item">
+          <a href="#" title="Skin Care">Oceans</a>
+        </li>
+        <li class="cat-list-item">
+          <a href="#" title="Health">Trekking</a>
+        </li>
+        <li class="cat-list-item">
+          <a href="#" title="Spa">Paragliding</a>
+        </li>
+        <li class="cat-list-item">
+          <a href="#" title="Friendship">Friendship</a>
+        </li>
+        <li class="cat-list-item">
+          <a href="#" title="Healing">Explore</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="Account">
+    <div class="offcanvas-header justify-content-center">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-4">
+          <span class="text-primary">Account</span>
+          <span class="badge bg-primary rounded-circle pt-2"><svg class="search" width="10" height="10">
+              <use xlink:href="#user"></use>
+            </svg></span>
+        </h4>
+
+        <section class="login-tabs">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="tabs-listing">
+                <nav>
+                  <div class="nav nav-tabs d-flex justify-content-center border-dark-subtle pb-3" id="nav-tab"
+                    role="tablist">
+                    <button class="nav-link account-tab mx-3 fs-4 text-capitalize fw-semibold active"
+                      id="nav-sign-in-tab" data-bs-toggle="tab" data-bs-target="#nav-sign-in" type="button" role="tab"
+                      aria-controls="nav-sign-in" aria-selected="true">Log In</button>
+                    <button class="nav-link account-tab mx-3 fs-4  text-capitalize fw-semibold" id="nav-register-tab"
+                      data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab"
+                      aria-controls="nav-register" aria-selected="false">Sign Up</button>
+                  </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade active show" id="nav-sign-in" role="tabpanel"
+                    aria-labelledby="nav-sign-in-tab">
+                    <div class="col">
+
+                      <p class="mb-0 py-2">Log-In With Social</p>
+                      <hr class="my-1">
+                      <div class="row g-2 py-4">
+                        <div class="d-grid col-md-6">
+                          <a href="#" class="btn btn-outline-dark px-1 py-2 rounded-0">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center">
+                              <svg class="cart" width="15" height="15">
+                                <use xlink:href="#google"></use>
+                              </svg>
+                              <p class="mb-0 ps-3">Google</p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="d-grid col-md-6">
+                          <a href="#" class="btn btn-outline-dark px-1 py-2 rounded-0">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center">
+                              <svg class="cart" width="15" height="15">
+                                <use xlink:href="#facebook"></use>
+                              </svg>
+                              <p class="mb-0 ps-3">Facebook</p>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+
+
+                      <p class="mb-0">Or Log-In With Email</p>
+                      <hr class="my-1">
+
+                      <form id="form1" class="form-group flex-wrap ">
+                        <div class="form-input col-lg-12 my-4">
+
+                          <input type="text" id="exampleInputEmail1" name="email" placeholder="Enter email address"
+                            class="form-control mb-3 p-4">
+                          <input type="password" id="inputPassword1" placeholder="Enter password"
+                            class="form-control mb-3 p-4" aria-describedby="passwordHelpBlock">
+
+                          <label class="py-3 d-flex flex-wrap justify-content-between">
+                            <div>
+                              <input type="checkbox" required="" class="d-inline">
+                              <span class="label-body ">Remember Me</span>
+                            </div>
+
+                            <div id="passwordHelpBlock" class="form-text ">
+                              <a href="#" class="text-primary  fw-bold"> Forgot Password?</a>
+                            </div>
+                          </label>
+                          <div class="d-grid my-3">
+                            <a href="#" class="btn btn-dark btn-lg rounded-1">Log In</a>
+                          </div>
+
+                        </div>
+                      </form>
+
+                    </div>
+
+                  </div>
+                  <div class="tab-pane fade" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab">
+                    <div class="col">
+
+                      <p class="mb-0 py-2">Sign-up With Social</p>
+                      <hr class="my-1">
+                      <div class="row g-2 py-4">
+                        <div class="d-grid col-md-6">
+                          <a href="#" class="btn btn-outline-dark px-1 py-2 rounded-0">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center">
+                              <svg class="cart" width="15" height="15">
+                                <use xlink:href="#google"></use>
+                              </svg>
+                              <p class="mb-0 ps-3">Google</p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="d-grid col-md-6">
+                          <a href="#" class="btn btn-outline-dark px-1 py-2 rounded-0">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center">
+                              <svg class="cart" width="15" height="15">
+                                <use xlink:href="#facebook"></use>
+                              </svg>
+                              <p class="mb-0 ps-3">Facebook</p>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+
+                      <p class="mb-0">Or Sign-Up With Email</p>
+                      <hr class="my-1">
+
+                      <form id="form1" class="form-group flex-wrap ">
+                        <div class="form-input col-lg-12 my-4">
+
+                          <input type="text" id="exampleInputName" name="email" placeholder="Your full name"
+                            class="form-control mb-3 p-4">
+                          <input type="text" id="exampleInputEmail1" name="email" placeholder="Your email address"
+                            class="form-control mb-3 p-4">
+                          <input type="password" id="inputPassword1" placeholder="Set your password"
+                            class="form-control mb-3 p-4" aria-describedby="passwordHelpBlock">
+                          <input type="password" id="inputPassword2" placeholder="Retype your password"
+                            class="form-control mb-3 p-4" aria-describedby="passwordHelpBlock">
+
+                          <label class="py-3 d-flex flex-wrap justify-content-between">
+                            <div>
+                              <input type="checkbox" required="" class="d-inline">
+                              <span class="label-body ">Remember Me</span>
+                            </div>
+
+                            <div id="passwordHelpBlock" class="form-text ">
+                              <a href="#" class="text-primary  fw-bold"> Forgot Password?</a>
+                            </div>
+                          </label>
+                          <div class="d-grid my-3">
+                            <a href="#" class="btn btn-dark btn-lg rounded-1">Sign Up</a>
+                          </div>
+
+                        </div>
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <header id="header">
+    <nav class="header-top py-1">
+      <div class="container-lg">
+        
+      </div>
+    </nav>
+    <nav class="logo text-center my-4">
+      <div class="container-lg ">
+        <a href="index.html"> <img src="m.jpg " alt="logo" width="800"></a>
+      </div>
+
+    </nav>
+    <nav id="primary-header " class="navbar navbar-expand-lg py-2 border-top">
+      <div class="container-lg ">
+        <button class="navbar-toggler border-0 d-flex d-lg-none order-3 p-2 shadow-none" type="button"
+          data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false">
+          <svg class="navbar-icon" width="50" height="50">
+            <use xlink:href="#navbar-icon"></use>
+          </svg>
+        </button>
+        <div class="header-bottom offcanvas offcanvas-end" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+          <div class="offcanvas-header px-4 pb-0">
+            <button type="button" class="btn-close btn-close-black mt-2" data-bs-dismiss="offcanvas" aria-label="Close"
+              data-bs-target="#bdNavbar"></button>
+          </div>
+          <div class="offcanvas-body align-items-center justify-content-center">
+            <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
+              <li class="nav-item px-3">
+                <a class="nav-link active p-0" aria-current="page" href="index.html">главная</a>
+              </li>
+              <li class="nav-item px-3 dropdown">
+                <a class="nav-link p-0 dropdown-toggle text-center " data-bs-toggle="dropdown" href="#" role="button"
+                  aria-expanded="false"> страницы</a>
+                <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 shadow">
+                  <li class="py-1"><a href="blog.html" class="dropdown-item text-uppercase ">блог <span                                    
+                        class="badge bg-secondary">Pro</span></a></li>
+                  <li class="py-1"><a href="contact.html" class="dropdown-item text-uppercase ">контакты <span
+                        class="badge bg-secondary">Pro</span></a></li>
+                  <li class="py-1"><a href="faq.html" class="dropdown-item text-uppercase ">вопросы <span
+                        class="badge bg-secondary">Pro</span></a></li>
+                  <li class="py-1"><a href="gallery.html" class="dropdown-item text-uppercase ">галерея<span
+                        class="badge bg-secondary">Pro</span></a></li>
+                </ul>
+              </li>              
+              <li class="nav-item px-3">
+                <a class="nav-link p-0" href="blog.html">блог</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link p-0" href="gallery.html">фотографии</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link p-0" href="contact.html">контакт</a>
+              </li>
+              <li class="nav-item px-3">                
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="t  28__rightcontainer"><div class="t228__right_descr">+79290783888</div> </div>
+      </div>                                  
+    </nav>
+  </header>
+
+  <section id="slider">
+    <div class="swiper slider position-relative">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide d-flex "
+          style="background-image: url(images/front-page3.jpg); background-size: cover; background-repeat: no-repeat; height: 80vh; background-position: center;">
+          <div class="container text-center m-auto mb-5 pb-5">
+            <div class="text-center w-75 m-auto bg-white p-3 p-lg-4 bg-opacity-50">
+              <p class="text-black" style="letter-spacing:1px;"></p>
+              <h2 class="display-5">ДЕЛАЙТЕ КАЖДЫЙ ШАГ СЧАСТЛИВЫМ И РАДОСТНЫМ В СВОЕЙ ЖИЗНИ</h2>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide d-flex "
+          style="background-image: url(images/front-page2.jpg); background-size: cover; background-repeat: no-repeat; height: 80vh; background-position: center;">
+
+          <div class="container text-center m-auto mb-5 pb-5">
+            <div class="text-center w-75 m-auto bg-white p-3 p-lg-4 bg-opacity-50">
+              <p class="text-black" style="letter-spacing:1px;"></p>
+              <h2 class="display-5"><a href="blog-single.html">ДЕЛАЙТЕ КАЖДЫЙ ШАГ СЧАСТЛИВЫМ И РАДОСТНЫМ В СВОЕЙ ЖИЗНИ</a></h2>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide d-flex "
+          style="background-image: url(images/front-page.jpg); background-size: cover; background-repeat: no-repeat; height: 80vh; background-position: center;">
+
+          <div class="container text-center m-auto mb-5 pb-5">
+            <div class="text-center w-75 m-auto bg-white p-3 p-lg-4 bg-opacity-50">
+              <p class="text-black" style="letter-spacing:1px;"></p>
+              <h2 class="display-5"><a href="blog-single.html">ДЕЛАЙТЕ КАЖДЫЙ ШАГ СЧАСТЛИВЫМ И РАДОСТНЫМ В СВОЕЙ ЖИЗНИ</a></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination slider-pagination position-absolute pb-5"></div>
+    </div>
+  </section>
+
+  <section id="blog" class="padding-medium">
+    <div class="container-lg">
+      <div class="row flex-row-reverse g-md-5">
+        <main class="col-lg-9">
+          <div class="card rounded-0 border-0 border-2 border-bottom pb-5">
+            <a href="single-post.html"><img src="https://a.d-cd.net/4b44e69s-1920.jpg" class="img-fluid" alt="image"></a>
+            <div class="card-body p-0 text-center">
+              <div class="text-center  mt-2">
+                <p class="text-gray" style="letter-spacing:1px;"></p>
+              </div>
+
+              <a href="single-post.html">
+                <h3 class="text-primary my-3 text-uppercase">Хотите отдохнуть со всей семьёй?</h1>
+              </a>
+              <p>Если вы планируете отдохнуть в Архызе, увидеть горы и насладиться уникальной природой, гостиница Сосновый бор идеально подойдёт для вас.
+              </p>
+             
+            </div>
+          </div>
+          <div class="card rounded-0 border-0 border-2 border-bottom py-5">
+            <a href="single-post.html"><img src="file:///C:/Users/Студент/Desktop/горы/scale.jpeg" class="img-fluid" alt="image"></a>
+            <div class="card-body p-0 text-center">
+              <div class="text-center  mt-2">
+                <p class="text-gray" style="letter-spacing:1px</p>
+              </div>
+
+              <a href="single-post.html">
+                <h3 class="text-primary my-3 text-uppercase">Приезжайте в Сосновый бор</h1>
+              </a>
+              <p>В нашей гостинице 3 типа номеров и 5 типов домиков, а также своя баня с сибирским чаном.
+              </p>
+             
+            </div>
+          </div>
+          <div class="card rounded-0 border-0 border-2 py-5">
+            <a href="single-post.html"><img src="file:///C:/Users/Студент/Desktop/горы/ar.jpg" class="img-fluid" alt="image"></a>
+            <div class="card-body p-0 text-center">
+              <div class="text-center  mt-2">
+                <p class="text-gray" style="letter-spacing:1px;"></p>
+              </div>
+
+              <a href="single-post.html">
+                <h3 class="text-primary my-3 text-uppercase">Там вас ожидает много всего интересного!</h1>
+              </a>
+              <p>Комфортные одноместные, двухместные и семейные номера различных категорий, Уютные апартаменты с кухней и отдельными зонами отдыха в домиках, Бесплатный Wi-Fi, Парковочные площадки рядом с гостиницой, Баня с купелью, Прокат спортивного инвентаря (лыжи, сноуборды) Места для пикников и детская игровая площадка на территории гостиниы.
+              </p>
+              
+            </div>
+          </div>
+          <!-- Add as you like to  -->
+          <!-- <div class="card rounded-0 border-0 border-2 border-bottom py-5">
+            <a href="single-post.html"><img src="images/blog7.jpg" class="img-fluid" alt="image"></a>
+            <div class="card-body p-0 text-center">
+              <div class="text-center  mt-2">
+                <p class="text-gray" style="letter-spacing:1px;"></p>
+              </div>
+
+              <a href="single-post.html">
+                <h3 class="text-primary my-3 text-uppercase">travel is the beginning of refreshment</h1>
+              </a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci morbi semper aliquam sit. Congue in odio
+                dui donec pharetra mauris ullamcorper duis sapien, lectus neque, amet.
+              </p>
+              
+            </div>
+          </div> -->
+
+          <nav aria-label="Page navigation example ">
+            <ul class="pagination justify-content-center">
+              <li class="page-item mx-md-2 "><a class="page-link" href="#"><svg class="me-1" width="22" height="22">
+                    <use xlink:href="#arrow-left"></use>
+                  </svg></a></li>
+              <li class="page-item mx-md-2 "><a class="page-link active" href="#"><b>1</b></a></li>
+              <li class="page-item mx-md-2 "><a class="page-link" href="#"><b>2</b></a></li>
+              <li class="page-item mx-md-2 "><a class="page-link" href="#"><b>3</b></a></li>
+              <li class="page-item mx-md-2 "><a class="page-link" href="#"><svg class="me-1" width="22" height="22">
+                    <use xlink:href="#arrow-right"></use>
+                  </svg></a></li>
+            </ul>
+          </nav>
+
+        </main>
+        <aside class="col-lg-3 border">
+          <div class="sidebar align-items-center text-center border-bottom px-3 pt-5">
+           <h5 class=" text-black fw-bold text-center text-uppercase pb-4">отзывы</h5>
+            
+              <p class="text-black lh-sm text-center secondary-heading fs-6 py-3">
+Андрей Гарахин</p> <p class="text-black lh-sm text-center secondary-heading fs-6 py-3">Отдыхаем тут второй раз. Плюсы: Качественное жильё за достойную цену,
+Наличие проката,
+Есть баня с купелью,
+Месторасположение в горной долине среди сосен,
+Тут же конные прогулки,
+Тут же квадроциклы,
+Приветливые люди кругом,
+Рядом несколько кафе с национальной кухней,
+Руководство всегда готово помочь решить любую проблему.
+Минус один:
+В долину не проложен асфальт, поэтому такси может быть не много дороже.</P>
+<p class="text-black lh-sm text-center secondary-heading fs-6 py-3">
+Евгений Алексеевич</p><p class="text-black lh-sm text-center secondary-heading fs-6 py-3">Отличный отель. Самые вкусные хычины в одном кафе,фото добавил, советую. Всё рядом советую для отдыха семьёй,до канатки 7 км</p>
+          </div>
+
+          
+
+          <div class="widget-post py-5 border-bottom text-center align-items-center px-3">
+            <h5 class=" text-black fw-bold text-center text-uppercase pb-2">фото</h5>
+            <div class="mb-4 align-items-center text-center">
+              <a href="#"><img src="https://optim.tildacdn.com/tild3163-3666-4563-a261-636265353338/-/format/webp/A7C02806-ARW_DxO_Dee.jpg.webp"
+                  class="background-position-center img-fluid background-repeat-norepeat " alt="image"></a>
+              <div class="card-body p-0 mb-1 mb-0 text-center">
+                <div class="text-center  mt-2">
+                  <p class="text-gray" style="letter-spacing:1px; font-size: 14px;"></p>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="mb-4 align-items-center text-center">
+              <a href="#"><img src="https://optim.tildacdn.com/tild3863-6235-4264-b230-306436323063/-/format/webp/A7C07731.jpg.webp  "
+                  class="background-position-center img-fluid background-repeat-norepeat " alt="image"></a>
+              <div class="card-body p-0 mb-1 mb-0 text-center">
+                <div class="text-center  mt-2">
+                  <p class="text-gray" style="letter-spacing:1px; font-size: 14px;"></p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mb-4 align-items-center text-center">
+              <a href="#"><img src="https://optim.tildacdn.com/tild6532-3563-4531-b738-366234613166/-/format/webp/A7C07741.jpg.webp  "
+                  class="background-position-center img-fluid background-repeat-norepeat " alt="image"></a>
+              <div class="card-body p-0 mb-1 mb-0 text-center">
+                <div class="text-center  mt-2">
+                  <p class="text-gray" style="letter-spacing:1px; font-size: 14px;"></p>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+         
+
+          <div class="widget-archive py-5 border-bottom">
+            <h5 class=" text-black fw-bold text-center text-uppercase pb-4">Где мы расположены</h5>
+
+            <ul class="categories sidebar-list list-unstyled">
+              <li class="cat-item ">
+                <a href="https://yandex.ru/maps/-/CHTQFM3L  " class="nav-link text-center fw-bold text-body-tertiary"> с. Архыз, ул. Софийская 41</a>
+              </li>
+              <li class="cat-item">
+                <a href="https://yandex.ru/maps/-/CHTQFM3L" class="nav-link text-center fw-bold text-body-tertiary">База отдыха находится в Архызе,</a>
+              </li>
+              <li class="cat-item">
+                <a href="https://yandex.ru/maps/-/CHTQFM3L" class="nav-link text-center fw-bold text-body-tertiary">на Софийской поляне,</a>
+              </li>
+              <li class="cat-item">
+                <a href="https://yandex.ru/maps/-/CHTQFM3L" class="nav-link text-center fw-bold text-body-tertiary">в лесном массиве.</a>
+              </li>
+              <li class="cat-item">
+                <a href="https://yandex.ru/maps/-/CHTQFM3L" class="nav-link text-center fw-bold text-body-tertiary">Недалеко протекает река Пшыш.</a>
+              </li>
+               <head><div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a><a href="https://yandex.ru/maps/11020/karachay-cherkess-republic/house/sofiyskaya_ulitsa_41/YEgYdARgS0cPQFppfXlzdXViYg==/?from=api-maps&ll=41.230334%2C43.524928&origin=jsapi_2_1_79&utm_medium=mapframe&utm_source=maps&z=20.65" style="color:#eee;font-size:12px;position:absolute;top:14px;">Софийская улица, 41 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?from=api-maps&ll=41.230334%2C43.524928&mode=whatshere&origin=jsapi_2_1_79&whatshere%5Bpoint%5D=41.230127%2C43.524921&whatshere%5Bzoom%5D=17&z=20.65" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>  </head>
+            </ul>
+          </div>
+
+          <div class="widget-gallery py-5 px-3">
+            <h5 class=" text-black fw-bold text-center text-uppercase pb-4">ГАЛЕРЕЯ</h5>
+            <div class="row g-1">
+              <div class="col-4">
+                <a href="https://avatars.mds.yandex.net/get-altay/14814101/2a000001969b6499afbd16bc64f8fab44edb/L" title="Sola" class="image-link"><img src="https://avatars.mds.yandex.net/get-altay/14814101/2a000001969b6499afbd16bc64f8fab44edb/L"
+                    class="post-image img-fluid "></a>
+              </div>
+              <div class="col-4">
+                <a href="https://avatars.mds.yandex.net/get-altay/9709178/2a000001893eace71632275022d71f92fc02/L" title="Sola" class="image-link"><img src="https://avatars.mds.yandex.net/get-altay/9709178/2a000001893eace71632275022d71f92fc02/L"
+                    class="post-image img-fluid "></a>
+              </div>
+              <div class="col-4">
+                <a href="https://avatars.mds.yandex.net/get-altay/15288852/2a000001969b64d27920ba82746ee33142e8/L" title="Sola" class="image-link"><img src="https://avatars.mds.yandex.net/get-altay/15288852/2a000001969b64d27920ba82746ee33142e8/L"
+                    class="post-image img-fluid "></a>
+              </div>
+              <div class="col-4">
+                <a href="https://a.d-cd.net/TIAAAgBOpOA-1920.jpg  " title="Sola" class="image-link"><img src="https://a.d-cd.net/TIAAAgBOpOA-1920.jpg"
+                    class="post-image img-fluid "></a>
+              </div>
+              <div class="col-4">
+                <a href="https://static.tildacdn.com/tild3838-3436-4333-a364-303761383938/photo_2024-03-03_09-.jpg" title="Sola" class="image-link"><img src="https://static.tildacdn.com/tild3838-3436-4333-a364-303761383938/photo_2024-03-03_09-.jpg"
+                    class="post-image img-fluid "></a>
+              </div>
+              <div class="col-4">
+                <a href="https://avatars.mds.yandex.net/get-altay/9724410/2a000001893eacfa858211de595e6283be25/XXXL" title="Sola" class="image-link"><img src="https://avatars.mds.yandex.net/get-altay/9724410/2a000001893eacfa858211de595e6283be25/XXXL"
+                    class="post-image img-fluid "></a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories" class="">
+    <div class="container-lg">
+      <div class="row g-3 g-lg-5">
+        <div class="col-md-4 ">
+          <div class="cat-item image-zoom-effect position-relative">
+            <div class="image-holder">
+              <a href="#"><img src="https://avatars.mds.yandex.net/i?id=020d7258639121732fef7d739c55acf1_l-5220441-images-thumbs&n=13" alt="categories" class="product-image img-fluid"a></a>
+              <div class="category-content text-white  large-category position-absolute text-uppercase">
+                <h2 class="section-title  text-center text-white"><a href="#">Лес</a></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ">
+          <div class="cat-item image-zoom-effect position-relative">
+            <div class="image-holder">
+              <a href="#"><img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_687904c65724464db7abddc4_687904dd9c519a7284a45eae/scale_1200" alt="categories" class="product-image img-fluid" width="1500" ></a>
+              <div class="category-content large-category position-absolute text-uppercase">
+                <h2 class="section-title  text-center text-white"><a href="#">Горы</a></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ">
+          <div class="cat-item image-zoom-effect position-relative">
+            <div class="image-holder">
+              <a href="#"><img src="https://arkhyz.getski.me/images/BlogItem/88576937cc384f2f29d588b1c41d8dd3_696x696.webp" alt="categories" class="product-image img-fluid"></a>
+              <div class="category-content large-category position-absolute text-uppercase">
+                <h2 class="section-title  text-center text-white"><a href="#">Водопады</a></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="instagram" class="padding-medium">
+    <h5 class=" text-black fw-bold text-center text-uppercase ">Инфраструктура рядом</h5>
+    <p class="text-center text-body-tertiary text-lowercase">Рядом с нашей гостиницей есть все необходимое для комфортного отдыха: свой прокат квадроциклов, свое кафе, продуктовый магазин, разнообразные пешие и конные маршруты.</p>
+    <div class="container-lg">
+      <div class="row g-2 align-items-center">
+        <div class="col mt-0">
+          <a href="https://avatars.mds.yandex.net/get-altay/993981/2a000001855007830c123b6504dc52f98780/L" title="WanderBlog" class="image-link"><img src="https://avatars.mds.yandex.net/get-altay/993981/2a000001855007830c123b6504dc52f98780/L"
+              class="post-image img-fluid "></a>
+        </div>
+        <div class="col mt-0">
+          <a href="file:///C:/Users/Студент/Desktop/горы/n.webp" title="WanderBlog" class="image-link"><img src="file:///C:/Users/Студент/Desktop/горы/n.webp"
+              class="post-image img-fluid "></a>
+        </div>
+        <div class="col mt-0">
+          <a href="file:///C:/Users/Студент/Desktop/горы/L.webp" title="WanderBlog" class="image-link"><img src="file:///C:/Users/Студент/Desktop/горы/L.webp"
+              class="post-image img-fluid "></a>
+        </div>
+        <div class="col mt-0">
+          <a href="file:///C:/Users/Студент/Desktop/горы/XXXL.webp" title="WanderBlog" class="image-link"><img src="file:///C:/Users/Студент/Desktop/горы/XXXL.webp"
+              class="post-image img-fluid "></a>
+        </div>
+        <div class="col mt-0">
+          <a href="file:///C:/Users/Студент/Desktop/горы/j.webp" title="WanderBlog" class="image-link"><img src="file:///C:/Users/Студент/Desktop/горы/j.webp"
+              class="post-image img-fluid "></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer">
+    <div class="container padding-medium pt-0">
+      <footer class="row">
+        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0 text-center border-end ">
+          <h5 class="py-3 fw-bold">быстрые ссылки</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a href="#" class="text-uppercase p-0 "> о нас </a></li>
+            <li class="nav-item"><a href="#" class="text-uppercase p-0 "> наши услуги </a></li>
+            <li class="nav-item"><a href="#" class="text-uppercase p-0 "> конфиденциальность</a></li>
+            <li class="nav-item"><a href="#" class="text-uppercase p-0 "> связаться с нами </a></li>  
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-6 mb-3 mb-lg-0  text-center px-5 border-end">
+          <a href="index.html"><h5 class=" text-black fw-bold text-center text-uppercase ">Условия проживания</h5></a>
+          <p class="text-black">
+          Главное правило — уважение к остальным. Если вы любите музыку, не включайте ее громко и выключайте совсем после 11 вечера. Мы очень внимательно относимся к чистоте в доме. Поэтому, если вы с животными, мы, к сожалению, не сможем вас заселить. С собой вы можете приносить любую еду, а так же бесплатно угощаться чаем. За отдельную плату можно заказать трехразовое питание. Комнаты старайтесь держать в чистоте. Генеральная уборка проводится раз в 2 недели. Если вы разбили или испортили вещи хостес, вам необходимо будет заплатить штраф. Заезд в дом начинается с 14 часов, а выезд до 12 часов.
+          </p>
+          <ul class="social-links text-black justify-content-center d-flex flex-wrap list-unstyled m-0">
+            <li class="social">
+              <a href="#">
+                
+              </a>
+            </li>
+            <li class="social ms-4">
+              <a href="#">
+               
+              </a>
+            </li>
+            <li class="social ms-4">
+              <a href="https://api.whatsapp.com/send/?phone=79290783888&text&type=phone_number&app_absent=0">
+               <svg class="t-sociallinks__svg" role="presentation" width="30px" height="30px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM69.7626 28.9928C64.6172 23.841 57.7739 21.0027 50.4832 21C35.4616 21 23.2346 33.2252 23.2292 48.2522C23.2274 53.0557 24.4823 57.7446 26.8668 61.8769L23 76L37.4477 72.2105C41.4282 74.3822 45.9107 75.5262 50.4714 75.528H50.4823C65.5029 75.528 77.7299 63.301 77.7363 48.2749C77.7408 40.9915 74.9089 34.1446 69.7626 28.9928ZM62.9086 53.9588C62.2274 53.6178 58.8799 51.9708 58.2551 51.7435C57.6313 51.5161 57.1766 51.4024 56.7228 52.0845C56.269 52.7666 54.964 54.2998 54.5666 54.7545C54.1692 55.2092 53.7718 55.2656 53.0915 54.9246C52.9802 54.8688 52.8283 54.803 52.6409 54.7217C51.6819 54.3057 49.7905 53.4855 47.6151 51.5443C45.5907 49.7382 44.2239 47.5084 43.8265 46.8272C43.4291 46.1452 43.7837 45.7769 44.1248 45.4376C44.3292 45.2338 44.564 44.9478 44.7987 44.662C44.9157 44.5194 45.0328 44.3768 45.146 44.2445C45.4345 43.9075 45.56 43.6516 45.7302 43.3049C45.7607 43.2427 45.7926 43.1776 45.8272 43.1087C46.0545 42.654 45.9409 42.2565 45.7708 41.9155C45.6572 41.6877 45.0118 40.1167 44.4265 38.6923C44.1355 37.984 43.8594 37.3119 43.671 36.8592C43.1828 35.687 42.6883 35.69 42.2913 35.6924C42.2386 35.6928 42.1876 35.6931 42.1386 35.6906C41.7421 35.6706 41.2874 35.667 40.8336 35.667C40.3798 35.667 39.6423 35.837 39.0175 36.5191C38.9773 36.5631 38.9323 36.6111 38.8834 36.6633C38.1738 37.4209 36.634 39.0648 36.634 42.2002C36.634 45.544 39.062 48.7748 39.4124 49.2411L39.415 49.2444C39.4371 49.274 39.4767 49.3309 39.5333 49.4121C40.3462 50.5782 44.6615 56.7691 51.0481 59.5271C52.6732 60.2291 53.9409 60.6475 54.9303 60.9612C56.5618 61.4796 58.046 61.4068 59.22 61.2313C60.5286 61.0358 63.2487 59.5844 63.8161 57.9938C64.3836 56.4033 64.3836 55.0392 64.2136 54.7554C64.0764 54.5258 63.7545 54.3701 63.2776 54.1395C63.1633 54.0843 63.0401 54.0247 62.9086 53.9588Z" fill="#000000"></path> </svg>
+              </a>
+            </li>
+            <li class="social ms-4">
+              <a href="#">
+                               
+              </a>
+            </li>
+            <li class="social ms-4">
+              <a href="#">
+
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+          <div class="widget-categories text-center">
+            <h5 class=" fw-bold py-3 text-center">Категории</h5>
+
+            <ul class="categories sidebar-list list-unstyled">
+              <li class="cat-item ">
+                <a href="#" class="text-uppercase p-0">Фотографии</a>
+              </li>
+              <li class="cat-item">
+                <a href="#" class="text-uppercase p-0">развлечения</a>
+              </li>
+              <li class="cat-item">
+                <a href="#" class="text-uppercase p-0">виды</a>
+              </li>
+              <li class="cat-item">
+                <a href="#" class="text-uppercase p-0">походы</a>             
+              </li> 
+            </ul>
+          </div>
+
+        </div>
+
+      </footer>
+    </div>
+
+    <div class="container-fluid border-top">
+      <footer class=" align-items-center text-center py-4">
+        <p class="m-0"> © 2025 WanderBlog - All rights reserved
+          HTML Website Template:<a href="https://templatesjungle.com/" class="text-decoration-underline"
+            target="_blank">TemplatesJungle</a></p>
+      </footer>
+    </div>
+  </section>
+
+
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/plugins.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+
+</html>
